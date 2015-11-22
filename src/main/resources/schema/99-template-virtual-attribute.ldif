@@ -1,0 +1,16 @@
+dn: cn=schema
+objectClass: top
+objectClass: ldapSubentry
+objectClass: subschema
+objectClasses: ( ds-cfg-template-virtual-attribute-oid
+  NAME 'ds-cfg-template-virtual-attribute'
+  SUP ds-cfg-virtual-attribute
+  STRUCTURAL
+  MUST (
+    ds-cfg-template
+  )
+  X-ORIGIN 'Template Virtual Attribute' )
+attributeTypes: ( ds-cfg-template-oid
+  NAME 'ds-cfg-template'
+  EQUALITY caseIgnoreMatch
+  X-ORIGIN 'Template Virtual Attribute' )
